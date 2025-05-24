@@ -6,7 +6,7 @@ import { CheckIcon, CloseIcon, InfoIcon } from '@chakra-ui/icons';
 // If these are not found due to missing package, Diff2HtmlUI might be undefined
 let Diff2HtmlUI: any = undefined;
 try {
-  const diff2htmlUiModule = require('diff2html-react');
+  const diff2htmlUiModule = require('diff2html');
   Diff2HtmlUI = diff2htmlUiModule.Diff2HtmlUI;
   // Dynamically try to import CSS if needed, or ensure your bundler handles this gracefully.
   // For now, we'll assume CSS might fail silently or is handled by bundler if package is missing.
