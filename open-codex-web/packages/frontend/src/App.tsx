@@ -1,13 +1,20 @@
 import React from 'react';
-import Placeholder from './components/Placeholder';
-import './App.css'; // Create this empty file
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import MainLayout from './components/layout/MainLayout';
+import ChatPage from './pages/ChatPage';
+import SettingsPage from './pages/SettingsPage';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <Placeholder />
-    </div>
+    <Router>
+      <MainLayout>
+        <Routes>
+          <Route path="/" element={<ChatPage />} />
+          <Route path="/settings" element={<SettingsPage />} />
+        </Routes>
+      </MainLayout>
+    </Router>
   );
-}
+};
 
 export default App;
