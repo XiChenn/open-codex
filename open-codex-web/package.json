@@ -1,0 +1,22 @@
+{
+  "name": "open-codex-web",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Web UI for Open Codex CLI",
+  "scripts": {
+    "install:all": "pnpm install --recursive",
+    "dev:backend": "pnpm --filter @open-codex-web/backend dev",
+    "dev:frontend": "pnpm --filter @open-codex-web/frontend dev",
+    "dev": "concurrently \"npm:dev:backend\" \"npm:dev:frontend\"",
+    "build:backend": "pnpm --filter @open-codex-web/backend build",
+    "build:frontend": "pnpm --filter @open-codex-web/frontend build",
+    "build": "pnpm run build:backend && pnpm run build:frontend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.0"
+  }
+}
